@@ -2,146 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Challenge - Task Selection</title>
+    <title>AI Challenge - Milescore</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-        }
-        
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-        
-        .task-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .task-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .task-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .task-card h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-        
-        .task-card p {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-        
-        .task-card:nth-child(1) {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .task-card:nth-child(2) {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .task-card:nth-child(3) {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-        
-        .task-card:nth-child(4) {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-        }
-        
-        footer {
-            text-align: center;
-            color: #999;
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-        
-        @media (max-width: 600px) {
-            .task-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-        }
+        body { font-family: sans-serif; background: #000; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { border: 1px solid #0062FF; padding: 20px; text-decoration: none; color: #fff; text-align: center; transition: 0.3s; }
+        .card:hover { background: #0062FF; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎯 AI Challenge</h1>
-        <p class="subtitle">Select a task to get started</p>
-        
-        <div class="task-grid">
-            <a href="task-1/index.html" class="task-card">
-                <h2>Task 1</h2>
-                <p>Leaderboard Dashboard</p>
-            </a>
-            
-            <a href="task-2/index.html" class="task-card">
-                <h2>Task 2</h2>
-                <p>Coming Soon</p>
-            </a>
-            
-            <a href="task-3/index.html" class="task-card">
-                <h2>Task 3</h2>
-                <p>Coming Soon</p>
-            </a>
-            
-            <a href="task-4/index.html" class="task-card">
-                <h2>Task 4</h2>
-                <p>Coming Soon</p>
-            </a>
-        </div>
-        
-        <footer>
-            AI Challenge 2026
-        </footer>
+    <h1>AI Challenge Portfolio</h1>
+    <div class="menu">
+        <a href="https://твой-url-task-1.lovable.app" class="card">Task 1</a>
+        <a href="https://твой-url-task-2.lovable.app" class="card">Task 2</a>
+        <div class="card" style="opacity: 0.5;">Task 3: Coming Soon</div>
+        <div class="card" style="opacity: 0.5;">Task 4: Coming Soon</div>
     </div>
 </body>
 </html>
