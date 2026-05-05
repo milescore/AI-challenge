@@ -1,22 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>AI Challenge - Milescore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Challenge | Milescore</title>
     <style>
-        body { font-family: sans-serif; background: #000; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
-        .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .card { border: 1px solid #0062FF; padding: 20px; text-decoration: none; color: #fff; text-align: center; transition: 0.3s; }
-        .card:hover { background: #0062FF; }
+        :root {
+            --primary: #0062FF;
+            --accent: #CDFC48;
+            --bg: #0a0a0a;
+            --card-bg: #141414;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            padding: 30px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Тот самый "Pixel-cut" угол из твоего дизайна */
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--bg);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 98, 255, 0.2);
+        }
+
+        .card.active {
+            border-left: 4px solid var(--primary);
+        }
+
+        .card.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            filter: grayscale(1);
+        }
+
+        .task-num {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card h2 {
+            margin: 0 0 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 40px;
+            color: #444;
+            font-size: 0.8rem;
+        }
+
+        .github-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <h1>AI Challenge Portfolio</h1>
-    <div class="menu">
-        <a href="https://твой-url-task-1.lovable.app" class="card">Task 1</a>
-        <a href="https://твой-url-task-2.lovable.app" class="card">Task 2</a>
-        <div class="card" style="opacity: 0.5;">Task 3: Coming Soon</div>
-        <div class="card" style="opacity: 0.5;">Task 4: Coming Soon</div>
+
+    <div class="header">
+        <h1>AI Challenge</h1>
+        <div class="subtitle">Milescore Portfolio · Web Apps Exploration</div>
     </div>
+
+    <div class="grid">
+        <!-- Task 1 -->
+        <a href="ВСТАВЬ_ССЫЛКУ_НА_TASK_1" class="card active">
+            <span class="task-num">Task 01</span>
+            <h2>НАЗВАНИЕ_TASK_1</h2>
+            <p>Первый этап челленджа. Исследование основ генерации и базового UI.</p>
+        </a>
+
+        <!-- Task 2 -->
+        <a href="ВСТАВЬ_ССЫЛКУ_НА_TASK_2_KEYFRAME" class="card active">
+            <span class="task-num">Task 02</span>
+            <h2>KEYFRAME</h2>
+            <p>Event-платформа для дизайн-сообщества. RSVP, генеративные обложки и дашборд хоста.</p>
+        </a>
+
+        <!-- Task 3 -->
+        <div class="card disabled">
+            <span class="task-num">Task 03</span>
+            <h2>Coming Soon</h2>
+            <p>Следующий этап разработки ИИ-приложений.</p>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="card disabled">
+            <span class="task-num">Task 04</span>
+            <h2>Coming Soon</h2>
+            <p>Финальный проект челленджа.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Repository: <a href="https://github.com/milescore/AI-challenge" class="github-link">github.com/milescore/AI-challenge</a>
+    </div>
+
 </body>
 </html>
