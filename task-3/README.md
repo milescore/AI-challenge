@@ -49,3 +49,8 @@ Questions will appear one by one with inline buttons (**A**, **B**, **C**).
 At the end of the 5th question, the bot calculates your score percentage and saves it to your permanent profile. 
 * Send the `/stats` command at any time.
 * **What happens:** The bot queries the database and returns your lifetime learning progress, including total quizzes completed, total correct answers, and your overall accuracy percentage.
+
+## 🔗 Live Demo
+
+You can interact with and test the live Telegram bot here:
+👉 Milescore Learning Bot (https://t.me/@Milescore_Learning_Bot)
